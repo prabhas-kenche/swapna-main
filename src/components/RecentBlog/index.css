@@ -1,0 +1,104 @@
+.car-card-container {
+    display: grid;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-right: 180px;
+    margin-left: 180px;
+    align-items: flex-start; /* Align items at the start */
+    justify-content: center; /* Center the cards */
+}
+
+/* Media Queries for Small Devices */
+@media (max-width: 767px) {
+    .car-card-container {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+.car-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 350px; /* Keep the max-width */
+    margin: 10px; /* Add margin for spacing */
+    padding: 20px;
+    text-align: left;
+    flex: 1 1 300px; /* Allow cards to grow and shrink */
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+}
+
+.car-card img {
+    width: 100%;
+    border-radius: 8px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.car-card h2 {
+    font-size: 24px;
+    margin: 15px 0;
+    color: #333;
+    text-align: left;
+}
+
+.car-card p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.car-features {
+    display: flex;
+    justify-content: flex-start;
+    margin: 15px 0;
+}
+
+.car-features div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #333;
+}
+
+.car-features div i {
+    color: #000000;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .car-card {
+        flex: 1 0 calc(50% - 20px); /* 2 cards per row on medium devices */
+    }
+}
+
+@media (max-width: 576px) {
+    .car-card {
+        flex: 1 0 100%; /* 1 card per row on small devices */
+    }
+}
+
+.car-hire-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.car-hire-header {
+    text-align: center;
+}
+
+.car-hire-title {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.car-hire-description {
+    font-size: 18px;
+    color: #666;
+}

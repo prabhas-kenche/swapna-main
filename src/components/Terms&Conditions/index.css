@@ -1,0 +1,112 @@
+.terms-conditions-container {
+  padding: 40px; /* Padding for the container */
+  background-color: #def2f1; /* White background for contrast */
+  border-radius: 12px; /* Rounded corners */
+  max-width: 900px; /* Maximum width for the container */
+  margin: 40px auto; /* Center the container with margin */
+  font-family: 'Arial', sans-serif; /* Font style for text */
+  color: #444; /* Darker text color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: left; /* Align all text to the left */
+  user-select: text; /* Allow text selection */
+  overflow: auto; /* Enable content scrolling if zoomed in */
+  margin-top: 0px;
+  font-family: 'Roboto', sans-serif;
+  border: 2px solid #000;
+}
+
+.terms-conditions-container h1 {
+  background-color: #17252a;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #feffff;
+  border-radius: 10px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  text-align: center; /* Centered main heading */
+  font-size: 40px; /* Font size for main title */
+  margin-bottom: 30px; /* Spacing below the title */
+}
+
+.terms-conditions-container h2 {
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  text-align: left; /* Left-aligned subheadings */
+  font-size: 26px; /* Font size for subheadings */
+  margin-top: 30px; /* Spacing above subheadings */
+  color: #000; /* Color for subheadings */
+}
+
+.terms-conditions-container p,
+.terms-conditions-container ul {
+  font-family: 'Roboto', sans-serif;
+  text-align: left; /* Left-align text in paragraphs and lists */
+  font-size: 18px; /* Font size for paragraph text */
+  line-height: 1.8; /* Line height for readability */
+  color: #555; /* Slightly darker color for text */
+  margin-bottom: 15px; /* Spacing below paragraphs and lists */
+}
+
+.terms-conditions-container ul {
+  font-family: 'Roboto', sans-serif;
+  list-style-type: disc; /* Bullet points for lists */
+  margin-left: 40px; /* Indent for list items */
+}
+
+.terms-conditions-container ul li {
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 10px; /* Spacing between list items */
+}
+
+.terms-conditions-container a {
+  color: #0d6efd; /* Color for links */
+  text-decoration: none; /* No underline by default */
+  font-weight: bold; /* Bold text for links */
+  border-bottom: 2px solid transparent; /* Underline effect on links */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.terms-conditions-container a:hover {
+  border-bottom: 2px solid #0d6efd; /* Underline color change on hover */
+}
+
+.terms-conditions-container h2:hover {
+  color: #000; /* Change color on hover */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Enable zoom functionality */
+body {
+  zoom: 1; /* Default zoom */
+}
+
+@media screen and (max-width: 600px) {
+  body {
+      zoom: 0.85; /* Adjust zoom for smaller screens */
+  }
+}
+
+
+.share-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.share-icon {
+  font-size: 24px;
+  color: #000; /* Green color for the share icon */
+  margin-right: 8px;
+}
+
+.share-text {
+  font-size: 16px;
+  color: #000;
+}
+
+.share-icon-container:hover .share-icon, 
+.share-icon-container:hover .share-text {
+  color: #000; /* Darker green on hover */
+}

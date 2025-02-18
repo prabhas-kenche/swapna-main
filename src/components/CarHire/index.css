@@ -1,0 +1,143 @@
+.car-card-container-2 {
+    background-color: #3aafa9;
+    display: grid;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-right: 180px;
+    margin-left: 180px;
+    align-items: flex-start; /* Align items at the start */
+    justify-content: center; /* Center the cards */
+}
+
+/* Media Queries for Small Devices */
+@media (max-width: 767px) {
+    .car-card-container {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+.car-card-2 {
+    background-color: #def2f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 350px; /* Keep the max-width */
+    margin: 10px; /* Add margin for spacing */
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 300px; /* Allow cards to grow and shrink */
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+}
+
+.car-card-2 img {
+    width: 100%;
+    border-radius: 8px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.car-card-2 h2 {
+    font-size: 24px;
+    margin: 15px 0;
+    color: #333;
+}
+
+.car-card-2 p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.car-features {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+}
+
+.car-features div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #333;
+}
+
+.car-features div i {
+    color: #000000;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .car-card-2 {
+        flex: 1 0 calc(50% - 20px); /* 2 cards per row on medium devices */
+    }
+}
+
+@media (max-width: 576px) {
+    .car-card-2 {
+        flex: 1 0 100%; /* 1 card per row on small devices */
+    }
+}
+
+.button2 {
+    background-color: #ffffff;
+    height: 40px;
+    width: 130px;
+    border-width: 0px;
+    border-radius: 7px;
+    cursor: pointer; /* Change cursor to pointer */
+    outline: none; /* Remove outline on focus */
+    transition: background-color 0.3s; /* Add a transition effect */
+}
+
+/* Remove the default blue highlight on hover */
+.button2:hover {
+    background-color: #ffffff; /* Maintain original background color */
+    border: none; /* Ensure no border on hover */
+}
+
+/* Remove border on active/click */
+.button2:active {
+    border: none; /* Ensure no border when clicked */
+}
+
+.car-hire-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #3aafa9;
+}
+
+.car-hire-header {
+    text-align: center;
+}
+
+.car-hire-title {
+    color: #000000;
+    font-size: 2.5 rem;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+.car-hire-description {
+    font-size: 18px;
+    color: #666;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+body {
+    touch-action: pan-x pan-y; /* Allows zooming on mobile devices */
+    overflow-x: hidden; /* Prevents horizontal scroll */
+    user-select: none; /* Prevents text selection on double-click */
+}
+
+img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+    pointer-events: none; /* Prevent interaction with images */
+}

@@ -1,0 +1,132 @@
+/* Navbar Styles */
+.navbar {
+  background-color: #2b7a78;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.self-driving-cars-logo-1 {
+  padding-top: 10px;
+  width: 100px;
+  height: 100px;
+  transition: width 0.3s ease, height 0.3s ease;
+  margin-right: 20px;
+}
+
+/* Nav Link Styles */
+.navbar .nav-link {
+  font-size: 1rem;
+  color: #DEF2F1 !important;
+  margin: 0 15px;
+  font-family: "Roboto";
+  padding-top: 13px;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.navbar .nav-link:hover {
+  color: #17252a !important;
+}
+
+
+
+/* Active Nav Link Styles */
+.navbar .active-nav {
+  color: #17252a !important; /* Active link color */
+  font-weight: bold;         /* Make the active link bold */
+  border-bottom: 2px solid #17252a; /* Optional underline for active state */
+}
+
+/* Navbar Toggler (Explorer Button) */
+.navbar-toggler {
+  margin-top: 10px;
+  height: 50px;
+  background-color: #DEF2F1;
+  border-color: #2b7a78; /* White border for button */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* White color for explorer icon */
+}
+
+/* Media Queries */
+/* Media Queries */
+@media (max-width: 992px) {
+  .navbar {
+    height: 90px;
+    padding: 10px;
+    padding-bottom: 40px;
+  }
+
+  .self-driving-cars-logo-1 {
+    width: 90px;
+    height: 95px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+  }
+
+  .navbar-collapse {
+    display: none; /* Start with height 0 */
+  }
+
+  .navbar-collapse.show {
+    max-height: 500px;
+    text-align: left;
+    display: flex; /* Use flexbox to layout items */
+    flex-direction: row; /* Stack items vertically */
+    position: absolute; /* Position it absolutely */
+    top: 100%; /* Position below the navbar */
+    left: 0; /* Align left */
+    right: 0; /* Align right */
+    background-color: #2b7a78; /* Same background for dropdown */
+    z-index: 1000; /* Bring it on top */
+    padding-left: 30px;
+    padding-bottom: 20px;
+  }
+
+  .navbar .nav-link {
+    text-align: left;
+    margin-bottom: 10px 0;
+    color: #DEF2F1 !important;
+  }
+
+  .navbar .active-nav {
+    color: #17252a !important; /* Active link color */
+    font-weight: bold;         /* Make the active link bold */
+    border-bottom: none;/* Optional underline for active state */
+  }
+
+  /* Remove blur effect on hover for smaller devices */
+  .navbar-toggler:hover {
+    filter: none; /* Ensure no blur or other effects on hover */
+    background-color: #DEF2F1; /* Maintain the same background color */
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar .nav-link {
+    font-size: 1.1rem;
+    margin: 0 5px;
+    padding-top: 0;
+    color: #DEF2F1 !important;
+  }
+
+  .self-driving-cars-logo-1 {
+    width: 80px;
+    height: 85px;
+  }
+
+  .navbar .active-nav {
+    color: #17252a !important; /* Active link color */
+    font-weight: bold;         /* Make the active link bold */
+    border-bottom: none;/* Optional underline for active state */
+  }
+}

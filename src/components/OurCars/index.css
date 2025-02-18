@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* This will help with layout consistency */
+}
+
+.html, body {
+  height: 100%; /* Ensure full height */
+  width: 100%; /* Ensure full width */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.our-cars-container{
+  background-color: #3aafa9;
+}
+
+.car-card-container-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive grid with wider cards */
+    gap: 20px; /* Gap between cards */
+    margin-right: 100px;
+    margin-left: 100px;
+    align-items: flex-start; /* Align items at the start */
+    justify-content: center; /* Center the cards */
+}
+
+@media (max-width: 767px) {
+    .car-card-container-2 {
+        display: flex;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+
+
+.car-card {
+    background-color: #def2f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Increased card width */
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 350px;
+    transition: transform 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+}
+
+.car-card img {
+    width: 100%;
+    border-radius: 8px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.car-card h2 {
+    font-size: 24px;
+    margin: 15px 0;
+    color: #333;
+    text-align: center;
+}
+
+.car-card p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.car-features {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+}
+
+.car-features div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #333;
+}
+
+.car-hidden-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    opacity: 0;
+}
+
+.car-visible {
+    max-height: 200px;
+    opacity: 1;
+}
+
+
+
+/* Media Queries for Responsive Cards */
+@media (max-width: 768px) {
+    .car-card {
+        flex: 1 0 calc(50% - 20px); /* 2 cards per row on medium devices */
+    }
+}
+
+@media (max-width: 576px) {
+    .car-card {
+        flex: 1 0 100%; /* 1 card per row on small devices */
+    }
+}
+
+
+
+.note-container {
+    background-color: #def2f1;  /* Light background for the note container */
+    border: 1px solid #ccc;      /* Border to visually separate the note */
+    padding: 20px;               /* Padding for spacing inside the container */
+    border-radius: 8px;          /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+  }
+  
+  .note-container h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;             /* Larger font size for the heading */
+    font-weight: 600;            /* Semi-bold font */
+    color: #333;                 /* Dark color for the heading */
+    margin-bottom: 15px;         /* Spacing below the heading */
+  }
+
+  .note-container h4{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+  }
+
+  @media (min-width: 768px) {
+    .note-container h4 {
+        text-transform: uppercase;  /* Capitalize text on larger devices */
+    }
+}
+  
+  .note-container p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;             /* Font size for introductory paragraph */
+    font-style: italic;          /* Italicized text for emphasis */
+    color: #555;                 /* Medium grey color */
+    margin-bottom: 15px;         /* Spacing between paragraph and list */
+  }
+.notes{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+  
+  .notes ul {
+    font-family: 'Roboto', sans-serif;
+    padding-left: 20px;          /* Indent the list items */
+    list-style-type: none;       /* Remove default bullet points */
+    color: #333;                 /* Darker color for text */
+}
+
+.notes ul li {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;         /* Space between list items */
+    line-height: 1.6;            /* Increase line spacing for readability */
+    font-size: 16px;             /* Adjust font size */
+    position: relative;          /* Position for the tick marks */
+    padding-left: 25px;          /* Space for the tick icon */
+}
+
+.notes ul li::before {
+    content: '✔';                /* Tick mark character */
+    color: #2b7a78;                /* Green color for the tick mark */
+    font-size: 18px;             /* Adjust size of tick mark */
+    position: absolute;          /* Absolute position for tick mark */
+    left: 0;                     /* Align tick mark to the left */
+    top: 0;                      /* Align tick mark to the top */
+    line-height: 1.6;            /* Align with text */
+}
+
+.notes ul ul {
+    font-family: 'Roboto', sans-serif;
+    padding-left: 20px;          /* Further indent nested lists */
+    list-style-type: none;       /* Remove bullet points for nested list */
+}
+
+.notes ul ul li {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 5px;          /* Less margin for nested list items */
+    font-size: 15px;             /* Slightly smaller font for nested items */
+    position: relative;          /* Position for tick marks */
+    padding-left: 25px;          /* Space for the tick icon */
+}
+
+.notes ul ul li::before {
+    content: '✔';                /* Tick mark character for nested lists */
+    color: #2b7a78;                /* Green color for nested tick marks */
+    font-size: 16px;             /* Slightly smaller tick mark */
+    position: absolute;          /* Absolute position for tick mark */
+    left: 0;                     /* Align tick mark to the left */
+    top: 0;                      /* Align tick mark to the top */
+    line-height: 1.6;            /* Align with text */
+}
+
+  @media (max-width: 768px) {
+    .note-container {
+      padding: 15px;             /* Adjust padding for smaller screens */
+    }
+  
+    .note-container h2 {
+      font-size: 20px;           /* Reduce heading size for mobile */
+    }
+  
+    .notes ul li, .notes ul ul li {
+      font-size: 14px;           /* Adjust font size for better readability on small screens */
+    }
+  }
+  
+
+
+/* index.css */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff; /* Or any background color */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.content-container {
+    padding-top: 80px; /* Ensure content doesn't overlap with the sticky header */
+}
+
+body {
+    touch-action: pan-x pan-y; /* Allows zooming on mobile devices */
+    overflow-x: hidden; /* Prevents horizontal scroll */
+    user-select: none; /* Prevents text selection on double-click */
+}
+
+img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+    pointer-events: none; /* Prevent interaction with images */
+}
+
+
+/* General button styles */
+.button {
+  background-color: #2b7a78; /* New background color */
+  height: 40px;
+  width: 130px;
+  border: none; /* Ensure no border */
+  border-radius: 7px;
+  color: #fff; /* Text color */
+  font-size: 16px; /* Adjust font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Hover state */
+.button:hover {
+  background-color: #17252a; 
+  color: #fff;
+}
+
+/* Active/click state */
+.button:active {
+  background-color: #17252a; /* Darker color when clicked */
+  border: none;
+}
+
+/* Disabled button */
+.button:disabled {
+  background-color: grey; /* Greyed out when disabled */
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+
+.form-slide {
+  position: fixed;
+  bottom: -100%; /* Initially hidden off-screen */
+  left: 0;
+  right: 0;
+  transition: bottom 0.3s ease-in-out; /* Smooth slide effect */
+}
+
+.form-slide.show {
+  bottom: 0; /* Slide in when visible */
+}
+
+
+.share-icon-2{
+  color: #000;
+  font-size: 25px;
+}
+
+.share-text-2{
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}

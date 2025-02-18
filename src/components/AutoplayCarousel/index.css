@@ -1,0 +1,68 @@
+.carousel {
+    position: relative;
+    width: 100vw; /* Decreased width for better appearance */
+    max-width: 800px; /* Added max-width for larger screens */
+    height: 40vh; /* Adjusted height for responsive scaling */
+    overflow: hidden;
+    margin: auto; /* Center the carousel */
+}
+
+.carousel-inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    height: 100%;
+    transition: transform 1.0s ease-in-out;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the container without distortion */
+}
+
+/* Hide non-active items */
+
+.carousel-item.active {
+    display: block;
+}
+
+/* Larger devices - fixed height */
+@media (min-width: 1200px) {
+    .carousel {
+        height: 350px; /* Set a fixed height for large screens */
+    }
+}
+
+/* Tablets - slightly smaller height */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .carousel {
+        height: 300px; /* Slightly smaller height for tablet-sized devices */
+    }
+}
+
+/* Mobile devices - larger relative height */
+@media (max-width: 767px) {
+    .carousel-item img {
+        width: 90%; /* Decrease image width to 90% of container */
+        height: auto; /* Maintain aspect ratio */
+        margin: 0 auto; /* Center the image */
+    }
+}
+
+
+body {
+    touch-action: pan-x pan-y; /* Allows zooming on mobile devices */
+    overflow-x: hidden; /* Prevents horizontal scroll */
+    user-select: none; /* Prevents text selection on double-click */
+}
+
+img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+    pointer-events: none; /* Prevent interaction with images */
+}

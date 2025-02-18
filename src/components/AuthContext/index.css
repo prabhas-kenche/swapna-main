@@ -1,0 +1,16 @@
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 97vh; /* Full viewport height */
+    color: #fff; /* Set your preferred background color */
+    margin: 0;
+    padding: 0;
+
+  }
+  
+body {
+    margin: 0;
+    padding: 0;
+}
+  

@@ -1,0 +1,657 @@
+/* Base styles for large screens (desktop) */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* This will help with layout consistency */
+  }
+
+.html, body {
+    height: 100%; /* Ensure full height */
+    width: 100%; /* Ensure full width */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+  }
+  
+  
+
+.heading {
+    font-size: 70px;
+    font-weight: 800;
+    font-family: sans-serif;
+    margin: 0 10px; /* Adjust spacing between words */
+
+}
+
+.name{
+    height: 250px;
+}
+
+.desc {
+    font-size: 40px;
+    color: #17252a;
+}
+
+.main-page {
+    padding-bottom: 20px;
+    background-color: #3aafa9;
+}
+
+.heading-container {
+    display: flex;
+    flex-direction: column;
+    color: #17252a;
+  }
+  
+  @media (min-width: 768px) { /* For larger devices */
+    .heading-container {
+      flex-direction: row; /* Switch to row layout on larger screens */
+      justify-content: center; /* Optional: center the text */
+      color: #17252a;
+    }
+  }
+
+/* Media Queries for Tablets (768px and up) */
+@media (max-width: 1024px) {
+    .heading {
+        font-size: 3rem; /* Increase font size for larger screens */
+      }
+
+    .desc {
+        font-size: 40px; /* Adjust description size */
+        color: #17252a;
+    }
+
+    .main-page {
+        background-color: #3aafa9;
+    }
+}
+
+/* Media Queries for Mobile Devices (767px and below) */
+@media (max-width: 767px) {
+    .heading {
+        font-size: 60px; /* Smaller heading font size for mobiles */
+    }
+
+    .desc {
+        font-size: 35px; /* Smaller description font size */
+        color: #17252a;
+    }
+
+    .main-page {
+        background-color: #3aafa9;
+    }
+
+    /* Adjust carousel image size for small screens */
+    .carousel img {
+        max-height: 250px;
+        object-fit: cover;
+    }
+}
+
+/* Media Queries for Extra Small Mobile (375px and below) */
+@media (max-width: 375px) {
+    .heading {
+        font-size: 55px; /* Further decrease heading size */
+    }
+
+    .desc {
+        font-size: 30px; /* Further decrease description size */
+    }
+
+    .carousel img {
+        max-height: 200px;
+    }
+}
+
+
+/* Base styles for large screens (desktops) */
+.about-section {
+    background-color: #3aafa9;
+    display: flex;
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center content */
+}
+
+.about-part {
+    max-width: 600px; /* Limit width for better readability on larger screens */
+    margin: 0 auto; /* Center horizontally */
+}
+
+.about {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.about-2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1f1f1f;
+    font-family: 'Roboto', sans-serif;
+}
+
+.about-desc-2 {
+    font-size: 16px;
+    color: #def2f1;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    height: 750px;
+    width: 800px;
+}
+
+/* Media Queries for Tablets (768px to 1024px) */
+@media (max-width: 1024px) {
+    .about-part {
+        margin: 0;
+        padding: 15px;
+    }
+
+    .about {
+        font-size: 35px; /* Slightly smaller for tablets */
+        color: #17252a;
+    }
+
+    .about-2 {
+        font-size: 15px;
+        font-weight: bold;
+        color: #000000;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .about-desc-2 {
+        font-size: 14px;
+        color: #17252a;
+    }
+
+    .img-fluid {
+        width: 100%; /* Ensure image takes full width */
+    }
+}
+
+/* Media Queries for Mobile Devices (767px and below) */
+@media (max-width: 767px) {
+    .about-part {
+        margin: 0;
+        padding: 10px;
+        text-align: center; /* Center text for better readability */
+    }
+
+    .about {
+        font-size: 28px; /* Smaller heading for mobiles */
+        color: #17252a;
+    }
+
+    .about-2 {
+        font-size: 18px;
+        font-weight: bold;
+        color: #000000;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .about-desc-2 {
+        font-size: 14px; /* Smaller paragraph font for mobiles */
+        margin-bottom: 15px;
+        color: #def2f1;
+    }
+
+    .img-fluid {
+        max-width: 100%;
+        height: auto; /* Ensure image remains responsive */
+    }
+}
+
+/* Media Queries for Extra Small Mobile (375px and below) */
+@media (max-width: 375px) {
+    .about {
+        font-size: 24px; /* Further reduced heading */
+        color: #17252a;
+    }
+
+    .about-2 {
+        font-size: 20px;
+        font-weight: bold;
+        color: #feffff;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .about-desc-2 {
+        font-size: 13px;
+        color: #def2f1;
+    }
+
+    .img-fluid {
+        width: 100%; /* Make sure image remains fully responsive */
+    }
+}
+
+
+
+/* Base styles for larger devices */
+.statistics-row {
+    background-color: #def2f1;
+    font-family: 'Roboto', sans-serif;
+}
+
+.statistics-row h1 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #17252a;
+    margin-bottom: 10px;
+    font-family: 'Roboto';
+}
+
+.statistics-row p {
+    font-size: 14px;
+    color: #000000;
+    font-family: 'Roboto';
+}
+
+.statistics-row .col-md-8 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.main-page {
+    padding-top: 100px;
+}
+
+.about-section {
+    margin-top: 50px;
+    
+}
+
+.stat-box {
+    flex: 1;
+    margin: 0 10px; /* Small margin between items */
+}
+
+
+/* Media Queries for Tablets (768px to 1024px) */
+@media (max-width: 1024px) {
+    .statistics-row h1 {
+        font-size: 30px;
+        font-family: 'Roboto';
+    }
+
+    .statistics-row p {
+        font-size: 13px;
+        font-family: 'Roboto';
+    }
+}
+
+/* Media Queries for Mobile Devices (767px and below) */
+@media (max-width: 767px) {
+    .statistics-row h1 {
+        font-size: 28px;
+        font-family: 'Roboto';
+    }
+
+    .statistics-row p {
+        font-size: 12px;
+        font-family: 'Roboto';
+    }
+}
+
+/* Media Queries for Extra Small Devices (375px and below) */
+@media (max-width: 375px) {
+    .statistics-row h1 {
+        font-size: 24px;
+        font-family: 'Roboto';
+    }
+
+    .statistics-row p {
+        font-size: 11px;
+        font-family: 'Roboto';
+    }
+
+    .statistics-row .col-md-4 {
+        margin-bottom: 25px;
+    }
+
+    .img-fluid {
+        width: 100%;
+    }
+}
+
+
+.welcome-part {
+    background-color: #3aafa9;
+    font-family: 'Roboto';
+}
+
+.about {
+    font-size: 28px; /* Base font size */
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.about-desc {
+    font-size: 16px; /* Base font size */
+    color: #def2f1;
+}
+
+.quote-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.quote-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .about {
+        font-size: 24px; /* Adjust for tablets */
+    }
+    .about-desc {
+        font-size: 14px; /* Adjust for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        font-size: 20px; /* Adjust for mobile */
+    }
+    .about-desc {
+        font-size: 12px; /* Adjust for mobile */
+    }
+}
+
+@media (max-width: 576px) {
+    .welcome-part {
+        padding-top: 30px; /* Adjust padding for smaller screens */
+        padding-bottom: 30px;
+    }
+    
+    .quote-image img {
+        max-width: 90%; /* Make quote image smaller on mobile */
+    }
+}
+
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Can be adjusted based on your design */
+    overflow: hidden;
+    background-color: #2b7a78;
+}
+
+.responsive-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    color: #17252a;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.overlay i {
+    color: #f9fbfe;
+    font-size: 2.5rem;
+    margin-right: 10px;
+}
+
+.overlay h1 {
+    font-size: 1.8rem;
+    margin-right: 15px;
+}
+
+.overlay p {
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .image-container {
+        height: 300px;
+        width: 100%;
+    }
+    .overlay {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+}
+
+
+
+.how-we-work {
+    text-align: center;
+    padding: 50px;
+    background-color: #3aafa9;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.how-we-work h1 {
+    font-family: sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.step {
+    text-align: center;
+    max-width: 200px;
+}
+
+.step .icon-container {
+    width: 80px;
+    height: 80px;
+    background-color: #def2f1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.step i {
+    font-size: 2rem;
+    color: black;
+}
+
+.step h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.step p {
+    font-size: 0.9rem;
+    color: #def2f1;
+}
+
+.arrow {
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .steps-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .arrow {
+        display: none; /* Hide arrows for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .how-we-work h1 {
+        font-size: 2rem;
+    }
+
+    .step h3 {
+        font-size: 1.1rem;
+    }
+
+    .step p {
+        font-size: 0.85rem;
+    }
+}
+
+
+.grid-container {
+    background-color: #3aafa9;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 25px;
+    gap: 20px;
+}
+
+.grid-item {
+    padding: 20px;
+}
+
+.grid-item h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px;
+    color: #333;
+}
+
+.grid-item h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #c29862;
+}
+
+.grid-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-item {
+        padding: 15px;
+    }
+
+    .grid-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .grid-item p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Card Styles */
+
+
+
+/* Background image and content positioning */
+.background-image {
+    width: 100%;
+    height: 70vh;
+    background-image: url('https://res.cloudinary.com/dagkvnqd9/image/upload/e1csgcui_vpxvcl.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+
+.footer-note {
+    text-align: center;
+    padding: 10px;
+    color: #999;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        padding: 10px;
+    }
+
+    .showroom-location {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info p {
+        font-size: 0.8em; /* Smaller font for contact info */
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+
+  
+  body {
+    touch-action: pan-x pan-y; /* Allows zooming on mobile devices */
+    overflow-x: hidden; /* Prevents horizontal scroll */
+    user-select: none; /* Prevents text selection on double-click */
+}
+
+img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+    pointer-events: none; /* Prevent interaction with images */
+}

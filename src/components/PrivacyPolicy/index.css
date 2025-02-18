@@ -1,0 +1,141 @@
+.privacy-policy-container {
+  padding: 40px;
+  background-color: #def2f1;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 40px auto;
+  font-family: 'Arial', sans-serif;
+  color: #444;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Align all text to the left */
+  user-select: text; /* Allow text selection */
+  overflow: auto; /* Enable content scrolling if zoomed in */
+  margin-top: 0px;
+  font-family: 'Roboto', sans-serif;
+  border: 2px solid #000;
+}
+
+.privacy-policy-container h1 {
+  background-color: #17252a;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #feffff;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2.5rem; /* Use rem for scalable sizes */
+  margin-bottom: 30px;
+  /* Primary color for heading */
+  font-family: 'Roboto', sans-serif;
+}
+
+.privacy-policy-container h2 {
+  font-weight: bold;
+  text-align: left;
+  font-size: 1.6rem; /* Use rem for scalable sizes */
+  margin-top: 30px;
+  color: #000; /* Secondary color for subheadings */
+  font-family: 'Roboto', sans-serif;
+}
+
+.privacy-policy-container p,
+.privacy-policy-container ul {
+  text-align: left;
+  font-size: 1.2rem; /* Use rem for scalable sizes */
+  line-height: 1.8;
+  color: #555; /* Slightly darker color for text */
+  margin-bottom: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.privacy-policy-container ul {
+  list-style-type: disc;
+  margin-left: 40px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.privacy-policy-container ul li {
+  margin-bottom: 10px; /* Spacing between list items */
+  font-family: 'Roboto', sans-serif;
+}
+
+.privacy-policy-container a {
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.privacy-policy-container a:hover {
+  border-bottom: 2px solid #0d6efd;
+  text-decoration: underline;
+}
+
+.privacy-policy-container h2:hover {
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+/* Enable zoom functionality */
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .privacy-policy-container {
+    padding: 20px; /* Reduce padding on smaller screens */
+  }
+
+  .privacy-policy-container h1 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .privacy-policy-container h2 {
+    font-size: 1.4rem; /* Adjust font size for smaller screens */
+  }
+
+  .privacy-policy-container p,
+  .privacy-policy-container ul {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}
+
+
+/* Add this CSS to your index.css */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure the modal is on top of other content */
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.modal-content button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
+}
