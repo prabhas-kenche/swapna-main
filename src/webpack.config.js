@@ -19,9 +19,18 @@ module.exports = {
   },
   resolve: {
     fallback: {
-      "path": require.resolve("path-browserify"),
-      "fs": false, 
-      "util": require.resolve("util/")
+      "path": false,
+      "fs": false,
+      "stream": require.resolve("stream-browserify"),
+      "crypto": require.resolve("crypto-browserify"),
+      "assert": require.resolve("assert"),
+      "util": require.resolve("util/"),
+      "process": require.resolve("process"),
     }
-  }  
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+      process: "process/browser",
+    }),
+  ],
 };

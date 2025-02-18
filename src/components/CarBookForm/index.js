@@ -5,9 +5,6 @@ import { collection, addDoc } from 'firebase/firestore';
 import { auth, db } from '../../firebaseConfig';
 import './index.css';
 
-const sqlite3 = require('sqlite3').verbose()
-const path = require('path')
-
 const CarBookForm = () => {
     const location = useLocation();
     const navigate = useNavigate();
@@ -97,24 +94,24 @@ const CarBookForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+    
         if (formData.age < 21) {
             alert('You must be over 21 years old to book a car.');
             return;
         }
-
+    
         if (formData.totalHours < 12) {
             alert('You must book the car for at least 12 hours.');
             return;
         }
-
+    
         const emailData = {
             to_name: "Swapna Self Drive Cars",
             from_name: formData.name,
             ...formData,
             carName: location.state.car.title,
         };
-
+    
         emailjs.send('service_fztnjic', 'template_mn2smp8', emailData, 'y5F9fIgHF5dMzYL9S')
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
@@ -124,13 +121,13 @@ const CarBookForm = () => {
             .catch((err) => {
                 console.log('FAILED...', err);
             });
-
+    
         const user = auth.currentUser;
         if (!user) {
             alert("You must be logged in to book a car.");
             return;
         }
-
+    
         try {
             const bookingData = {
                 ...formData,
@@ -138,57 +135,29 @@ const CarBookForm = () => {
                 carImage: location.state.car.imgSrc,
                 userId: user.uid,
             };
-
+    
             await addDoc(collection(db, "my-bookings"), bookingData);
-
-            //Database
-            const dbPath = path.join(__dirname, '../../car_bookings.db')
-            const db = new sqlite3.Database(dbPath)
-
-            db.run(`
-                CREATE TABLE IF NOT EXISTS bookings (
-                    id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    name TEXT,
-                    profession TEXT,
-                    age INTEGER,
-                    contact TEXT,
-                    email TEXT,
-                    address TEXT,
-                    pickupDate TEXT,
-                    pickupTime TEXT,
-                    dropDate TEXT,
-                    dropTime TEXT,
-                    visitingPlaces TEXT,
-                    totalDays TEXT,
-                    totalHours INTEGER,
-                    carTitle TEXT,
-                    carImage TEXT,
-                    userId TEXT
-                )
-            `);
-
-            const stmt = db.prepare(`
-                INSERT INTO bookings (
-                    name, profession, age, contact, email, address, pickupDate, pickupTime, dropDate, dropTime, visitingPlaces, totalDays, totalHours, carTitle, CarImage, userId
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-            `)
-
-            stmt.run(
-                formData.name, formData.profession, formData.age, formData.contact, formData.email, formData.address,
-                formData.pickupDate, formData.pickupTime, formData.dropDate, formData.pickupTime, formData.visitingPlaces,
-                formData.totalDays, formData.totalHours, location.state.car.title, location.state.car.imgSrc, user.uid
-            )
-
-            stmt.finalize();
-            db.close();
-
-            setSubmitted(true);
-            navigate('/my-bookings');
+    
+            // Call backend to save to SQLite
+            const response = await fetch("http://localhost:5000/api/book-car", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(bookingData),
+            });
+    
+            const result = await response.json();
+            if (response.ok) {
+                console.log("Booking saved to SQLite:", result);
+                setSubmitted(true);
+                navigate('/my-bookings');
+            } else {
+                throw new Error(result.error);
+            }
         } catch (error) {
             console.error("Error submitting booking:", error);
             alert("Failed to submit booking. Please try again.");
         }
-    };
+    };    
 
     const handleGoHome = () => {
         navigate('/');
